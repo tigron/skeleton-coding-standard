@@ -3,6 +3,8 @@ Projects created with the Skeleton-framework follow specific cosing standards. I
 
 Our coding standards not only specify how PHP files should look like, but also covers all other aspects that relate to a Skeleton project.
 * [General specifications](/general/index.md)
-* PHP
-* MySQL
-* Twig
+* [PHP](/php/index.md)
+* [Twig](/twig/index.md)
+* [Javascript](/javascript/index.md)
+* [Mysql](/mysql/index.md)
+
