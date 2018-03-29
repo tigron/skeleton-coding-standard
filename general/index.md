@@ -1,4 +1,5 @@
 # General specifications
 
-* UTF-8: The default charset for every file created is UTF-8
-* Indentation with tab
+* The character encoding for all source code UTF-8
+* Unix line endings (U+000A)
+* Indentation is done with tabs
