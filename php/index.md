@@ -3,12 +3,22 @@
 We use **1TBS** indentation [https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_(OTBS)](https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_(OTBS)) with **tabs**.
 
 	public function my_function() {
-		if (a == b) {
+		if ($a == $b) {
 			return true;
 		}
 	}
 
 **ATTENTION: NO SPACE FOR CODE INDENTATION !!**
+
+## Naming
+For variables, we use strict snake case:
+
+	$the_best_variable_ever = 'abcd';
+
+For classes, we use a mix of camel and snake case:
+
+	class Customer_Project {
+    }
 
 ## Classes basics
 Start PHP files / classes by:
