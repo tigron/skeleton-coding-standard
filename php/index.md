@@ -1,31 +1,14 @@
 # PHP
+
 ## General
-We use **1TBS** indentation [https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_(OTBS)](https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_(OTBS)) with **tabs**.
 
-	public function my_function() {
-		if ($a == $b) {
-			return true;
-		}
-	}
+### File structure
 
-**ATTENTION: NO SPACE FOR CODE INDENTATION !!**
-
-## Naming
-For variables, we use strict snake case:
-
-	$the_best_variable_ever = 'abcd';
-
-For classes, we use a mix of camel and snake case:
-
-	class Customer_Project {
-    }
-
-## Classes basics
-Start PHP files / classes by:
+Start any PHP source file by:
 
 	<?php
 
-do not close the PHP at the end.
+Do not use the PHP closing tag at the end of the file.
 
 Order of elements in the file:
 
@@ -35,7 +18,37 @@ Order of elements in the file:
 * public static functions
 * private static functions
 
-## Various coding rules for readability
+
+### Indentation
+
+We use [**1TBS**](https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_(OTBS)) indentation with **tabs**.
+
+	public function my_function() {
+		if ($a == $b) {
+			return true;
+		}
+	}
+
+Never use spaces for indenting code.
+
+
+## Naming
+
+### Variables
+
+Variables use strict snake case:
+
+	$the_best_variable_ever = 'abcd';
+
+
+### Classes
+
+Classes use a mix of camel and snake case:
+
+	class Customer_Project {
+	}
+
+## Spacing and readability
 
 	$variable = 'a_value';  // OK
 	$variable='a_value';    // NOK
@@ -52,8 +65,10 @@ Order of elements in the file:
 	$my_array = [];      // OK
 	$my_array = array(); // NOK
 
-## Code documentation
-Every class starts with a documentation block.
+
+## Documenting code
+
+Classes start with a documentation block.
 
 	<?php
 	/**
@@ -64,7 +79,18 @@ Every class starts with a documentation block.
 	 * @author John Doe <john@tigron.be>
 	 */
 
-Every function is prepended with a documentation block.
+Class variables also have their own documentation block.
+
+	/**
+	 * Login required
+	 *
+	 * @var $login_required
+	 */
+	protected $login_required = true;
+
+And finally, methods are also preceded by a documentation block. The
+implementation of the method starts directly after the documentation
+block, do not insert an empty line.
 
 	/**
 	 * A description for this method
@@ -78,14 +104,3 @@ Every function is prepended with a documentation block.
 	 public my_function(Class_Name $param_name) {
 	 	return $something;
 	 }
-
-function starts directly the line after, no blank line.
-
-Global variables are prepended by a documentation block
-
-	/**
-	 * Login required
-	 *
-	 * @var $login_required
-	 */
-	protected $login_required = true;
