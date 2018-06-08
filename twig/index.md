@@ -45,3 +45,24 @@ Tables are drawn using the following structure:
 	{% else %}
 		{# code when no objects available #}
 	{% endfor %}
+
+## Translations
+
+When adding a string to a template, make sure it is translatable. We support
+three different ways of doing so:
+
+    {% trans %}Welcome to my awesome application.{% endtrans %}
+
+    {% trans "Welcome to my awesome application." %}
+
+    {{ "Welcome to my awesome application."|trans }}
+
+Try to adhere to the guidelines below:
+
+* Always include puncuation when it makes sense.
+* Avoid splitting scentences over multiple `trans` tags or pipes.
+
+If you need to include a variable in your string, use placeholders. Placeholders
+follow the `sprintf` notation.
+
+    {{ "Hello %s, and welcome to my awesome application."|trans|format(name) }}
