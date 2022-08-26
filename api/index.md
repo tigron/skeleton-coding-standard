@@ -11,6 +11,19 @@ package.
 ## casing
 
 Classnames, endpoints and variables should be defined using camelCase. 
+Classnames should not be split by slashes. 
+
+Ex:
+
+    /productType
+
+or
+
+    /product/type
+
+The latter is not allowed, since it could interfer with an action in the 
+/product endpoint.
+
 
 ## Endpoint parameters
 
@@ -43,15 +56,14 @@ other variable required:
 
     GET /customer/{customerId}
 
+### Lookups
 
-
-
-fix naming 'chanelAccount' ⇒ 'Account'. All other channelAccount* classes should be renamed also.
-Order of parameters in URL should follow the class hierarchy
-We avoid redundant data in the URL. No more required parameters as needed to identify 1 object
-Only uniquely identifiable properties can end up in the URL. All other properties should be passed via GET
-ex: /account/{accountId} vs /account/getByEmail?email={email}
 A lookup based on a property is always defined as 'getByProperty'
+
+    ex GET /customer/getByEmail?email={email}
+
 A search based on a (part of a) property is defined as '/search'
-classnames should end up in camelcase in the url. ex productType (not /product/type)
+
+    ex GET /customer/search?term={search}
+
 
