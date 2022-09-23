@@ -32,3 +32,7 @@ Identifiers must only contain lowercase alphanumericals and underscores.
 
 Unless circumstances are such that they require an exception, "path" is the
 preferred term.
+
+### Create and update objects via modal
+Unless circumstances are such that they require an exception, "modal.add.twig" and "modal.edit.twig"
+are the preferred filenames for modals to create and update objects. 
