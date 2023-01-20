@@ -1,5 +1,9 @@
 # PHP
 
+We follow [PSR-12](https://www.php-fig.org/psr/psr-12/), and by extent
+[PSR-1](https://www.php-fig.org/psr/psr-1/), except for what is defined
+explicitly in this document.
+
 ## General
 
 ### File structure
@@ -32,11 +36,11 @@ We use [**1TBS**](https://en.wikipedia.org/wiki/Indentation_style#Variant:_1TBS_
 Never use spaces for indenting code.
 
 
-## Naming
+## Classes, Properties, Methods and Functions
 
-### Variables
+### Properties
 
-Variables use strict snake case:
+Properties use strict snake case:
 
 	$the_best_variable_ever = 'abcd';
 
@@ -45,7 +49,37 @@ Variables use strict snake case:
 
 Classes use a mix of camel and snake case:
 
-	class Customer_Project {
+	class Class_Name extends Parent_Class implements \Some_Interface, \Countable {
+		// constants, properties, methods
+	}
+
+The `extends` and `implements` keywords and the opening brace must be on the
+same line as the class name, except when splitting across multiple lines.
+
+	class Class_Name extends Parent_Class implements
+		\Some_Interface,
+		\Countable
+	{
+		// constants, properties, methods
+	}
+
+### Methods and Functions
+
+Method and function names must use strict snake case:
+
+	public function foo_bar(string $arg1, int &$arg2, ?int $arg3,  $arg4 = []) {
+		// body
+	}
+
+The opening brace must be on the same line as the method or function name,
+except when the argument list is split across multiple lines.
+
+	public function ver_long_method(
+		ClassTypeHint $arg1,
+		&$arg2,
+		array $arg3 = []
+	) {
+		// body
 	}
 
 ## Spacing and readability
