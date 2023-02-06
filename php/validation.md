@@ -100,6 +100,7 @@ return [
 		PhpCsFixer\Fixer\ClassNotation\ClassDefinitionFixer::class,
 		SlevomatCodingStandard\Sniffs\ControlStructures\DisallowEmptySniff::class,
 		PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff::class,
+		NunoMaduro\PhpInsights\Domain\Insights\ForbiddenGlobals::class,
 	],
 	'config' => [
 		ForbiddenDefineGlobalConstants::class => [
