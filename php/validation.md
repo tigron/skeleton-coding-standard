@@ -101,6 +101,7 @@ return [
 		SlevomatCodingStandard\Sniffs\ControlStructures\DisallowEmptySniff::class,
 		PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff::class,
 		NunoMaduro\PhpInsights\Domain\Insights\ForbiddenGlobals::class,
+		SlevomatCodingStandard\Sniffs\Classes\ModernClassNameReferenceSniff::class, // valid only from PHP8
 	],
 	'config' => [
 		ForbiddenDefineGlobalConstants::class => [
