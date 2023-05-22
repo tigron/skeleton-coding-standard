@@ -37,6 +37,19 @@ Example:
 * invoice
 * invoice_item
 
+### Data types
+
+Data of specific types should use the types suggested in the list below,
+or the closest available type. Between brackets is the minumum length
+expected.
+
+* id: unsigned integer (11)
+* integer: integer (11)
+* currency: decimal (10,2)
+* string: varying character (255)
+* text: text or the largest text type
+* boolean: boolean or the smallest integer type
+
 ### Order of columns
 
 Columns in the table must be sorted by meaning for readability:
@@ -50,10 +63,10 @@ Example of a typical table:
 
 | name | data type |
 | --- | --- |
-| id | int(11) Auto Increment |
-| language_id | int(11) |
-| firstname | varchar(128) |
-| lastname | varchar(128) |
+| id | unsigned integer (11) auto_increment |
+| language_id | unsigned integer (11) |
+| firstname | varying character (128) |
+| lastname | varying character (128) |
 | created | datetime |
 | updated | datetime null |
 | archived | datetime null |
