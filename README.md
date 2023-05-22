@@ -10,5 +10,5 @@ but also to any other aspect of the skeleton project.
 * [PHP](/php/index.md)
 * [Twig](/twig/index.md)
 * [JavaScript](/javascript/index.md)
-* [MySQL](/mysql/index.md)
+* [Database](/database/index.md)
 * [API](/api/index.md)
