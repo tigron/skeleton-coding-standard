@@ -125,6 +125,16 @@ return [
 		PhpCsFixer\Fixer\FunctionNotation\FunctionDeclarationFixer::class => [
 			'closure_function_spacing' => 'none',
 		],
+		PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\SpaceAfterNotSniff::class => [
+			'spacing' => 0,
+		],
+		PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\SpaceAfterCastSniff::class => [
+			'spacing' => 0,
+		],
+		SlevomatCodingStandard\Sniffs\Commenting\DocCommentSpacingSniff::class => [
+			'linesCountBetweenDifferentAnnotationsTypes' => 0,
+			'linesCountBetweenAnnotationsGroups' => 0,
+		],
 	],
 	'requirements' => [
 		'min-quality' => 90.0,
