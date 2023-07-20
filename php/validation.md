@@ -102,6 +102,8 @@ return [
 		PHP_CodeSniffer\Standards\Generic\Sniffs\WhiteSpace\DisallowTabIndentSniff::class,
 		NunoMaduro\PhpInsights\Domain\Insights\ForbiddenGlobals::class,
 		SlevomatCodingStandard\Sniffs\Classes\ModernClassNameReferenceSniff::class, // valid only from PHP8
+		PHP_CodeSniffer\Standards\Squiz\Sniffs\Classes\ValidClassNameSniff::class,
+		NunoMaduro\PhpInsights\Domain\Insights\ForbiddenNormalClasses::class,
 	],
 	'config' => [
 		ForbiddenDefineGlobalConstants::class => [
