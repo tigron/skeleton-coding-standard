@@ -137,6 +137,9 @@ return [
 			'linesCountBetweenDifferentAnnotationsTypes' => 0,
 			'linesCountBetweenAnnotationsGroups' => 0,
 		],
+		PhpCsFixer\Fixer\CastNotation\CastSpacesFixer::class => [
+			'space' => 'none',
+		],
 	],
 	'requirements' => [
 		'min-quality' => 90.0,
