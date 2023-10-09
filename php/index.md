@@ -138,3 +138,152 @@ block, do not insert an empty line.
 	 public my_function(Class_Name $param_name) {
 	 	return $something;
 	 }
+
+## Code beauty (by PHP Insights)
+
+### Avoid useless variables
+
+	function my_function() {
+		$data = call_to_another_function();
+		return $data;
+	}
+
+$data is, in this case, a useless variable.  Prefer this:
+
+	function my_function() {
+		return call_to_another_function();
+	}
+
+### Avoid empty statements
+
+**If blocks**
+
+	if ($a === $b) {
+	} else {
+		do_something();
+	}
+
+avoid the empty statement by
+
+	if ($a !== $b) {
+		do_something();
+	}
+
+**Empty catch**
+
+	try {
+		do_something();
+	} catch (Exception $e) {}
+
+Avoid this as much as possible, hiding an exception will always cause an issue one day or another.
+
+### For loop avoid functional calls in test
+
+	for ($i = 0; $i < a_call_to_a_function(); $i++) {
+
+if this would sound a bad idea to older developers who had to optimize code as much as possible when CPUs were not that fast as they are now ... prefer this:
+
+	$count = a_call_to_a_function();
+	for ($i = 0; $i < $count; $i++) {
+
+### Disallow equals operators
+Never use **==** or **!=** anymore.  Always use **===** or **!==**.
+
+It's not only for PHP Insights that it is not good but also because we are trying to go for completely strict type in variables and that would be a brake to accomplish our goal.
+
+### Increment and decrement operators should be a single operation
+
+PHP Insights prevents the follwing:
+
+	$sheet->setCellValueByColumnAndRow($col++, $row, $something);
+	$sheet->setCellValueByColumnAndRow($col++, $row, $something_else);
+
+This writing is also not appreciated by PHP Insig
+
+	$sheet->setCellValueByColumnAndRow($col, $row, $something); $col++;
+	$sheet->setCellValueByColumnAndRow($col, $row, $something_else); $col++;
+It should be coded that way
+
+	$sheet->setCellValueByColumnAndRow($col, $row, $something);
+	$col++;
+	$sheet->setCellValueByColumnAndRow($col, $row, $something_else);
+	$col+
+
+### No useless else
+
+	if (a_certain_condition) {
+		return $something;
+	} else {
+		return $something_else;
+	}
+
+This is prohibited by PHP Insights who requests this:
+
+	if (a_certain_condition) {
+		return $something;
+	}
+	return $something_else;
+
+This is also valid for break, continue, and other operators that stop the current execution.
+
+### One class per file
+Do not define extra classes (like i.e. exceptions) in the PHP file of another class.
+
+### Function call argument spacing
+Do not write
+
+	call_to_function($a,$b,$c);
+
+But well
+
+	call_to_function($a, $b, $c);
+
+### Lower case type
+Parameters types must be lowercase: **object**, **string** instead of ~~Object~~, ~~String~~.
+
+### Trailing array comma
+Arrays with multiple lines must have a comma at the end of the last element
+
+	$fruits = [
+		'apple',
+		'pear',
+		'banana',
+	];
+
+But, for single line arrays, that is prohibited.
+
+### Alphabetically sorted uses
+
+	use \package\classA
+	use \package\classC
+	use \package\classB
+
+is not correct, should be
+
+	use \package\classA
+	use \package\classB
+	use \package\classC
+
+### Binary operator spaces
+Even if it is easier to read, this is not correct
+
+	$data[] = [
+		'firstname' 	=> 'John',
+		'lastname'	=> 'Doe',
+		'streetname'	=> 'Wisteria Lane',
+		'housenumber'	=> '4352',
+		'city'		=> 'Fairview',
+	];
+
+The proper way of writing is the following
+
+	$data[] = [
+		'firstname' => 'John',
+		'lastname' => 'Doe',
+		'streetname' => 'Wisteria Lane',
+		'housenumber' => '4352',
+		'city' => 'Fairview',
+	];
+
+### Single quote vs double quotes
+When possible, always prefer using single quotes.  Better for performance and code unity.
