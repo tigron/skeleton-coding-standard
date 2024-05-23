@@ -287,3 +287,7 @@ The proper way of writing is the following
 
 ### Single quote vs double quotes
 When possible, always prefer using single quotes.  Better for performance and code unity.
+
+## Validation
+
+More information about automatic code validation with PHPInsights, can be found here: [validation](validation.md).
