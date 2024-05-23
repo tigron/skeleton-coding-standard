@@ -12,7 +12,7 @@ use SlevomatCodingStandard\Sniffs\Functions\UnusedParameterSniff;
 use SlevomatCodingStandard\Sniffs\TypeHints\DisallowArrayTypeHintSyntaxSniff;
 use SlevomatCodingStandard\Sniffs\TypeHints\DisallowMixedTypeHintSniff;
 
-return [
+$config = [
 	'preset' => 'default',
 	'exclude' => [
 		'lib/external/',
@@ -87,4 +87,12 @@ return [
 	],
 	'diff_context' => 10,
 ];
+
+/**
+ * If the project does not contain a composer.lock file, no security check can be done
+ */
+if (!file_exists('composer.lock')) {
+	$config['remove'][] = NunoMaduro\PhpInsights\Domain\Insights\ForbiddenSecurityIssues::class;
+}
+return $config;
 
