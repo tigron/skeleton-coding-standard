@@ -34,6 +34,7 @@ $config = [
 		PHP_CodeSniffer\Standards\Squiz\Sniffs\Classes\ValidClassNameSniff::class,
 		NunoMaduro\PhpInsights\Domain\Insights\ForbiddenNormalClasses::class,
 		PHP_CodeSniffer\Standards\PSR1\Sniffs\Classes\ClassDeclarationSniff::class,
+		NunoMaduro\PhpInsights\Domain\Insights\ForbiddenTraits::class,
 	],
 	'config' => [
 		ForbiddenDefineGlobalConstants::class => [
