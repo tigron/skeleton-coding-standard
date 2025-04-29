@@ -18,8 +18,10 @@ Order of elements in the file:
 
 * class variables
 * public functions
+* protected function
 * private functions
 * public static functions
+* protected static functions
 * private static functions
 
 
