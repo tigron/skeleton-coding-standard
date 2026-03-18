@@ -1,0 +1,21 @@
+{
+	"name": "tigron/skeleton-coding-standard",
+	"description": "Tigron Skeleton object traits",
+	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Tigron BVBA",
+			"email": "support@tigron.be"
+		}
+	],
+	"support": {
+		"source": "https://github.com/tigron/skeleton-coding-standard",
+		"issues": "https://github.com/tigron/skeleton-coding-standard/issues"
+	},
+	"autoload": {
+		"psr-4": {
+			"Skeleton\\Coding\\Standard\\": "php/Skeleton/Coding/Standard/"
+		}
+	},
+}
