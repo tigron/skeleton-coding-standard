@@ -23,6 +23,9 @@ $config = [
 		'migration',
 	],
 	'add' => [
+		\NunoMaduro\PhpInsights\Domain\Metrics\Code\Code::class => [
+			\Skeleton\Coding\Standard\EmptyStatementSniff::class,
+		]	
 	],
 	'remove' => [
 		PHP_CodeSniffer\Standards\PSR1\Sniffs\Methods\CamelCapsMethodNameSniff::class,
@@ -34,7 +37,11 @@ $config = [
 		PHP_CodeSniffer\Standards\Squiz\Sniffs\Classes\ValidClassNameSniff::class,
 		NunoMaduro\PhpInsights\Domain\Insights\ForbiddenNormalClasses::class,
 		PHP_CodeSniffer\Standards\PSR1\Sniffs\Classes\ClassDeclarationSniff::class,
+		SlevomatCodingStandard\Sniffs\Classes\ForbiddenPublicPropertySniff::class,
+		NunoMaduro\PhpInsights\Domain\Sniffs\ForbiddenSetterSniff::class,
 		NunoMaduro\PhpInsights\Domain\Insights\ForbiddenTraits::class,
+		PHP_CodeSniffer\Standards\Generic\Sniffs\CodeAnalysis\EmptyStatementSniff::class,
+		SlevomatCodingStandard\Sniffs\TypeHints\ParameterTypeHintSniff::class
 	],
 	'config' => [
 		ForbiddenDefineGlobalConstants::class => [
