@@ -1,6 +1,6 @@
 {
 	"name": "tigron/skeleton-coding-standard",
-	"description": "Tigron Skeleton object traits",
+	"description": "Tigron Skeleton coding standard",
 	"type": "library",
 	"license": "MIT",
 	"authors": [
