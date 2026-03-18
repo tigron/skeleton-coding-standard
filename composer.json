@@ -17,5 +17,5 @@
 		"psr-4": {
 			"Skeleton\\Coding\\Standard\\": "php/Skeleton/Coding/Standard/"
 		}
-	},
+	}
 }
