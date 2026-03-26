@@ -15,10 +15,10 @@ use SlevomatCodingStandard\Sniffs\TypeHints\DisallowMixedTypeHintSniff;
 $config = [
 	'preset' => 'default',
 	'exclude' => [
-		'lib/external/',
-		'tmp/',
-		'util/',
-		'store/',
+		'lib/external',
+		'tmp',
+		'util',
+		'store',
 		'lib/component/FpdiPdfParser',
 		'migration',
 	],
