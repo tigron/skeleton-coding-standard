@@ -79,3 +79,12 @@ with an underscore:
 
 * table: `customer` becomes `_customer`
 * column: `middle_name` becomes `_middle_name`
+
+## Operations
+
+### Modifying the database schema
+
+If you need to modify the database schema (for example via an `ALTER TABLE`),
+it is good practice to keep these statements as narrow in scope as possible.
+
+For example, avoid adding foreign keys and columns in a single statement.
